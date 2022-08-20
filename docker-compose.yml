@@ -1,0 +1,18 @@
+version: "3.9"
+services:
+  nginx:
+    build: .
+    ports:
+      - "80:80"
+    links:
+      - fpm
+
+  fpm:
+    build: ./php
+    ports:
+      - ":9000"
+    volumes:
+      - application:/app
+
+volumes:
+  application:
