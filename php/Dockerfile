@@ -1,3 +1,3 @@
 FROM php:8.0-fpm
 COPY . /app
-EXPOSE 9000
+EXPOSE 9000 
