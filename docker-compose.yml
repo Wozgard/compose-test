@@ -4,6 +4,8 @@ services:
     build: .
     ports:
       - "80:80"
+    volumes:
+      - application:/app
     links:
       - fpm
 
